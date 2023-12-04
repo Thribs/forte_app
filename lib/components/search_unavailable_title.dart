@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forte/components/call_support_text_link.dart';
 
 class SearchUnavailableTitle extends StatelessWidget {
   const SearchUnavailableTitle({
@@ -7,10 +8,19 @@ class SearchUnavailableTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      const Text("busca automática indisponível. Chame nosso"),
-      OutlinedButton(onPressed: () {}, child: const Text("atendimento")),
-      const Text("para buscarmos manualmente."),
-    ],);
+    return const Wrap(
+      direction: Axis.horizontal,
+      children: [
+        Text(
+          "busca automática indisponível. Chame nosso",
+          style: TextStyle(),
+        ),
+        Padding(
+          padding: EdgeInsets.fromLTRB(4, 0, 4, 0),
+          child: CallSupportTextLink(),
+        ),
+        Text("para buscarmos manualmente."),
+      ],
+    );
   }
 }
