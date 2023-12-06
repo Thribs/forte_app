@@ -15,7 +15,7 @@ class CallSupportTextLink extends StatelessWidget {
     final url = Strings.supportWhatsappUrl(phoneNumber);
     final uri = Uri.parse(url);
     return Link(
-      target: LinkTarget.self,
+      target: LinkTarget.blank,
       uri: uri,
       builder: (context, followLink) {
         return MouseRegion(

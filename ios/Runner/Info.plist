@@ -47,7 +47,7 @@
 	<true/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>https://wa.me/5512992223481</string>
+		<string>https</string>
 	</array>
 </dict>
 </plist>

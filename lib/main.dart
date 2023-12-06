@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:forte/components/busca_cnpj_form.dart';
 import 'package:forte/components/call_support_floating_action_button.dart';
+import 'package:forte/resources/strings.dart';
 
 void main() {
   runApp(const ForteApp());
@@ -90,7 +91,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton:
-          const CallSupportFloatingActionButton(), // This trailing comma makes auto-formatting nicer for build methods.
+          const CallSupportFloatingActionButton(message: Strings.requestHelpMessage), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
