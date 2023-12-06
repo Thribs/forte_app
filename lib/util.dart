@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:forte/data/forte.dart';
 import 'package:forte/resources/strings.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Util {
-
   static Future openBrowserUrl(url, {bool inApp = false}) async {
     Uri uri = Uri.parse(url);
     if (!await canLaunchUrl(uri)) {
@@ -18,5 +18,11 @@ class Util {
     String phoneNumber = Forte.supportPhoneNumber;
     String url = "https://wa.me/$phoneNumber?text=$message";
     openBrowserUrl(url, inApp: true);
+  }
+
+  static showSnackBar(BuildContext context, {Widget? child, String? text}) {
+    // null-aware assignment
+    child ??= Text(text ?? "");
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: child));
   }
 }
